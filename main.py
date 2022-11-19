@@ -12,7 +12,7 @@ level = Level()
 level.start()
 
 player = Turtle()
-player.shape("square")
+player.shape("turtle")
 player.penup()
 player.left(90)
 player.goto(0, -150)
@@ -40,7 +40,6 @@ while game_is_on:
     sleep(0.1)
     screen.update()
     for cars in level.cars_list:
-        # here key is a turtle object(car)
         if cars.xcor() < -220:
             level.make_car()
             level.cars_speeds.remove(

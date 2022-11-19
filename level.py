@@ -40,6 +40,6 @@ class Level:
         self.cars_speeds.append(choice(self.moving_speeds))
 
     def progress(self):
-        self.increased_car += 2
+        self.increased_car += 1
         for i in range(self.increased_car):
             self.make_car()

@@ -6,6 +6,7 @@ class Scoreboard(Turtle):
         super().__init__()
         self.score = 1
         self.printscore()
+        self.graphics()
 
     def finalscore(self):
         self.goto(0, 0)
@@ -17,7 +18,17 @@ class Scoreboard(Turtle):
         self.penup()
         self.goto(-170, 170)
         self.write(f"Level : {self.score}", font=(8))
+        self.graphics()
 
     def scoreincrease(self):
         self.score += 1
         self.printscore()
+
+    def graphics(self):
+        self.penup()
+        self.goto(-100, 180)
+        self.pendown()
+        self.goto(100, 180)
+        self.penup()
+        self.goto(0, 180)
+        self.write("Finish line", align="Center")
